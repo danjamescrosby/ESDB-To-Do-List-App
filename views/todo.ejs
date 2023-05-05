@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<title>Todo App</title>
+<link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+<script src="static/scripts/scripts.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+<div class="todo-container">
+<% if (page == "home") { %><h2>To-Do List</h2><% } else {%><h2>Removed Items</h2><% } %>
+<div class="todo">
+<form action="/" method="POST" class="todo-header">
+<input type="text" name="content">
+<button type="submit"><span class="fas fa-plus"></span></button>
+</form>
+<ul class="todo-list">
+<% todoTasks.forEach(details => { %>
+    <li class="todo-list-item" data-status="<%= details.status %>">
+    <% if (page == "home") { %><input onclick="checkboxChanged('<%= details.name %>','<%= details.id %>');" type="checkbox" id="<%= details.id %>" name="<%= details.id %>" value="<%= details.name %>" <%= details.checked %>><% } %>
+    <div class="todo-list-item-name"><label for="<%= details.id %>"><%= details.name %></label></div>
+    <% if (details.status != "Removed"){ %><a href="javascript:;" class="remove" onclick="taskRemoved('<%= details.name %>');"><span class="fas fa-times"></span></a><% } else { %><a href="javascript:;" class="restore" onclick="taskUpdated('<%= details.name %>','Restored');"><span class="fas fa-undo"></span></a><% } %>
+    </li>
+    <% }) %>
+</ul>
+<% if (page == "home") { %>
+    <a class="bin" href="/removed"><span class="fas fa-trash"></span></a>
+<% } %>
+<% if (page == "removed") { %>
+    <a class="home" href="/"><span class="fas fa-home"></span></a>
+<% } %>
+</div>
+</div>
+</body>

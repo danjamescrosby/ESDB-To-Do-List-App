@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+        background: #e6e6e6;
+        background-image: url(https://www.eventstore.com/hubfs/Website%20Images/gradient.svg) !important;
+        background-size: cover !important;
+        background-position: right bottom !important;
+        background-repeat: no-repeat !important;
+        min-height: calc(100vh - 50px);
+    }
+    .todo-container {
+    color: white;
+    padding: 30px 20px 45px;
+    width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    position: relative;
+    }
+    .todo {
+    width: 400px;
+    }
+    .todo-container h2 {
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    }
+    .todo-header input {
+    width: 92%;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    font-family: 'Arial', sans-serif;
+    }
+    .todo-header button {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(51, 212, 100);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    }
+    .todo-container ul {
+    list-style: none;
+    }
+    .todo-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    }
+    .todo-list-item form {
+    width: 100%;
+    display: flex;
+    }
+    .todo-list-item input {
+    //flex-grow: 2;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    }
+    .todo-list-item button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(51, 212, 100);
+    }
+    .todo-list-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+    }
+    .todo-list-item div {
+    flex-grow: 2;
+    margin-right: 20px;
+    }
+    .todo-list-item .edit {
+    color : rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor:pointer;
+    text-decoration: none;
+    }
+    .todo-list-item .remove {
+    color : rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;
+    }
+    .bin {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    }
+    .home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    }
+    .todo-list-item .restore {
+    color : rgb(255, 255, 255);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;
+    }
+    .bin .fas, .home .fas, .restore .fa-solid {
+    color: white;
+    }
