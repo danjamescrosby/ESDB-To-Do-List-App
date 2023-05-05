@@ -6,4 +6,5 @@ A simple to do list application using EventStoreDB as the database, the EventSto
 
 # How to run
 - Make sure EventStoreDB server is running at localhost:2113
+- Navigate to the client application folder and run ```npm install```
 - Start the client application using ```npm start```
